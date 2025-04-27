@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #e0f7fa;
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-container {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    width: 350px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: 600;
+}
+
+.input-group {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+#todo-input {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid #00acc1;
+    border-right: none;
+    border-radius: 5px 0 0 5px;
+    font-size: 16px;
+}
+
+#add-btn {
+    padding: 10px 20px;
+    background-color: #00acc1;
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#add-btn:hover {
+    background-color: #00838f;
+}
+
+#todo-list {
+    list-style: none;
+    text-align: left;
+}
+
+#todo-list li {
+    background: #f1f8e9;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;
+    transition: 0.3s ease;
+    opacity: 0;
+    transform: translateY(-10px);
+    animation: slideIn 0.3s forwards;
+}
+
+#todo-list li:hover {
+    background: #dcedc8;
+}
+
+#todo-list li.completed {
+    text-decoration: line-through;
+    color: #888;
+}
+
+#todo-list li button {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background: crimson;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+#todo-list li button:hover {
+    background: darkred;
+}
+
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
